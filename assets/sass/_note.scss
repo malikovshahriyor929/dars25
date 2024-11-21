@@ -1,0 +1,24 @@
+.swiper_txt {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 0.94118;
+  color: #46a358;
+}
+.notes > div {
+  margin-top: 50px;
+}
+.swiper_shop {
+    padding-bottom: 30px;
+  & p {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.06667;
+    color: #3d3d3d;
+  }
+  & span {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+    color: #46a358;
+  }
+}

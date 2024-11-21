@@ -1,0 +1,139 @@
+.header > div {
+  padding-top: 20px;
+  border-bottom: 1px solid #46a358;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.links {
+  ul {
+    display: flex;
+    gap: 50px;
+    li {
+      a {
+        color: #3d3d3d;
+        font-weight: 400;
+        font-size: 16px;
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 3px;
+          background-color: #46a358;
+          bottom: -26px;
+          transform: scaleX(0);
+          transition: 0.5s;
+          transform-origin: left;
+          border-radius: 10px;
+        }
+        &:hover::before {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
+.navbar_icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  & img:hover {
+    transform: scale(1.15);
+    transition: 0.4s;
+  }
+  & button:active {
+    transform: scale(0.9);
+  }
+}
+.btn {
+  border-radius: 6px;
+  width: 100px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: #46a358;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+}
+.filter,
+.search{
+  display: none;
+}
+@media (max-width: 800px) {
+  .links ul {
+    gap: 25px;
+  }
+}
+@media (max-width: 700px) {
+  .logo {
+    height: 25px;
+    width: 90px;
+  }
+  .navbar_icons {
+    gap: 5px;
+  }
+  .header > div{
+padding-bottom :6px;  }
+  .btn {
+    height: 25px;
+    width: 70px;
+    font-size: 12px;
+    gap: 3px;
+    &img {
+      height: 15px;
+      width: 15px;
+    }
+  }
+}
+@media (max-width: 562px) {
+  .logo {
+    display: none;
+  }
+  .search {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+    border-radius: 10px;
+    width: 80%;
+    height: 45px;
+    background: #f8f8f8;
+    & img{
+      opacity: 0.5;
+    }
+    & input {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      width: 99%;
+    }
+  }
+  .header > div{
+    border-bottom: none;
+  }
+  .links {
+    display: none;
+  }
+  .navbar_icons {
+    display: none;
+  }
+  .filter{
+    background-color: #46a358;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+width: 45px;
+height: 45px;
+box-shadow: 0 10px 20px 0 rgba(70, 163, 88, 0.3);
+background: linear-gradient(137deg, rgba(70, 163, 89, 0.425) 0%, #46a358 100%);
+  }
+}
